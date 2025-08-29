@@ -1,0 +1,461 @@
+/* -------------------------- Global Resets & Base Styles -------------------------- */
+* {
+  box-sizing: border-box;
+    /* outline: 1px solid red;  temporary */
+
+}
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  background-color: #fff;
+  overflow-x: hidden;
+}
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+.container {
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+html, body {
+  overflow-x: hidden;
+}
+
+
+/* -------------------------- Header Section -------------------------- */
+header {
+  background-color: #fff;
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+.logo-img {
+  width: 30px;
+  height: auto;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+nav ul li a {
+  text-decoration: none;
+  color: #343891;
+  font-weight: 600;
+}
+nav ul li a:hover {
+  color: #8cc540;
+}
+.cta {
+  background-color: #343891;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+}
+.cta:hover {
+  background-color: #d80189;
+  color:#fff;
+}
+
+/* -------------------------- Hero Section (Carousel) -------------------------- */
+.hero {
+  position: relative;
+  height: 80vh;
+  overflow: hidden;
+}
+.hero-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  color: white;
+  padding: 2rem 0;
+}
+.hero-slide.active {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 1s ease-in-out;
+}
+.hero-slide .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 2rem;
+}
+.hero-content {
+  flex: 1;
+  max-width: 600px;
+}
+.hero-content h1 {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+}
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+.btn-primary, .btn-secondary {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  margin-right: 1rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+}
+.btn-primary {
+  background: #007BFF;
+  color: white;
+}
+.btn-secondary {
+  background: white;
+  color: #007BFF;
+}
+.hero-image {
+  flex: 1;
+  text-align: right;
+}
+.hero-image img {
+  max-width: 100%;
+  height: auto;
+}
+/* Slide backgrounds (gradient) */
+.slide-1 { background: linear-gradient(135deg, #0052D4, #4364F7, #6FB1FC); }
+.slide-2 { background: linear-gradient(-48deg, #8DC641 0%, #6FBF4E 50%, #3D8F30 100%); }
+.slide-3 { background: linear-gradient(135deg, #fc5c7d, #6a82fb); }
+/* Animation */
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+/* -------------------------- Buttons -------------------------- */
+.btn-primary {
+  background-color: #343891;
+  color: #fff;
+  padding: 12px 25px;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 16px;
+  display: inline-block;
+}
+.btn-primary:hover { background-color: #3d43e3; }
+.btn-secondary {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  padding: 12px 25px;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 16px;
+}
+.btn-secondary:hover { background-color: rgba(255, 255, 255, 0.5); }
+
+/* -------------------------- Service Cards -------------------------- */
+.service-card-content {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+.card {
+  border-radius: 10px;
+  flex: 1 1 300px;
+  min-height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+  color: #333;
+}
+.c-1 { background: linear-gradient(135deg, #e6f0ff, #f2f6fd);}
+.c-2 { background: linear-gradient(135deg, #dcf2d4, #f8fff2);}
+.c-3 { background: linear-gradient(135deg, #fce5ec, #f4e7ff);}
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: bold;
+}
+.card-body { margin: 10px 0; text-align: center; font-size: 14px; }
+.card-footer { text-align: center; }
+.btn-small { font-size: 14px; padding: 8px 16px; }
+
+/* -------------------------- Icons & Circles -------------------------- */
+.icon { font-style: normal; }
+.circle {
+  background-color: #fff;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* -------------------------- Triple Y Health Section -------------------------- */
+.tripleyhealth-section { margin-bottom: 60px; }
+.booking-section { padding: 60px 0 }
+.section-header {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+.section-sub-header {
+  text-align: center;
+  font-size: 14px;
+  max-width: 650px;
+  margin: 0 auto 30px auto;
+  font-weight: 600;
+}
+.body-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.left-section, .right-section { flex: 1 1 48%; }
+.left-section { display: flex; justify-content: flex-end; }
+.right-section { display: flex; flex-direction: column; justify-content: flex-start; }
+.right-section p { max-width:400px; }
+.about-linda .left-section { display: flex; justify-content: flex-end; padding-left: 40px; }
+.about-linda .right-section { display: flex; justify-content: flex-end; padding-left: 40px; }
+.buy-book-section {
+  background-color: #F0D5FE;
+  padding: 40px;
+}
+.buy-book-section .left-section { justify-content: flex-end; }
+.buy-book-section .right-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  max-width: 65ch;
+}
+.buy-book-section .right-section > * { margin-bottom: 1px; margin-top: 5px; }
+.book-description, .author-info { line-height: 1.6; max-width: 60ch; }
+
+.text { margin-bottom: 15px; }
+.lrg-logo { max-width: 300px; }
+
+/* -------------------------- Book Section -------------------------- */
+.img-book { width: 100%; max-width: 400px; }
+.book-title, .author-info, .book-description, .book-price { margin-bottom: 2px; }
+.btn-md { padding: 10px 20px; font-size: 15px; }
+
+/* -------------------------- Testimonial Section -------------------------- */
+.testimonial-section { padding: 60px 0; background-color: #f5f5f5; }
+.testimonial-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 30px;
+  justify-content: center;
+}
+.testmonial-card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  padding: 20px;
+  flex: 1 1 300px;
+  max-width: 350px;
+}
+.testmonial-card-header {
+  font-size: 18px;
+  font-weight: bold;
+  color: #343891;
+  margin-bottom: 10px;
+}
+.testmonial-card-body {
+  font-style: italic;
+  margin-bottom: 20px;
+  color: #444;
+}
+.reviewer-section { display: flex; align-items: center; gap: 10px; }
+.profile-picture .reviewer-img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #ddd;
+}
+.reviewer-info { font-size: 14px; }
+
+/* -------------------------- Footer -------------------------- */
+footer {
+  background-color: #e4b6fe;
+  padding: 40px 20px;
+  font-size: 14px;
+  border-top: 1px solid #eee;
+}
+footer .container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: space-between;
+}
+.about-summary, .quick-links, .contact-info { flex: 1 1 250px; }
+.about-summary-header, .quick-link-heading, .contact-info-heading {
+  color: #343891;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+.summary-text, .quick-link-text, .contact-info-text { color: #555; }
+footer ul { list-style: none; padding: 0; margin: 0; }
+footer a { text-decoration: none; color: #343891; }
+footer a:hover { color: #8cc540; }
+.copyright-section { margin-top: 30px; text-align: center; }
+.icons i { margin-right: 10px; font-style: normal; }
+
+.resized { width: 400px; }
+.resized-x { max-width: 50%; }
+.inner-content { padding: 20px; margin: 40px; }
+.review-cta { margin: 20px auto; text-align: center; }
+.fa-star { color: #ffe234; }
+.fa-facebook { color: #0052D4; }
+.fa-linkedin { color: #0052D4; }
+
+/* -------------------------- Hamburger Menu -------------------------- */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 25px;
+  height: 18px;
+  cursor: pointer;
+}
+.hamburger span {
+  display: block;
+  height: 3px;
+  background: #343891;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 5px;
+  }
+
+  .booking-section {
+    height: 1000px !important;
+  }
+
+  .body-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .left-section,
+  .right-section {
+    flex: 1 1 100%;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .about-linda .left-section {
+    text-align: left;
+    align-items: flex-start;
+  }
+
+  .buy-book-section .right-section {
+    align-items: center;
+  }
+
+  .buy-book-section .right-section > * {
+    margin-bottom: 0px;
+  }
+
+  .book-description,
+  .author-info {
+    line-height: 1.5;
+    max-width: 60ch;
+  }
+
+  .img-book {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .btn-buy {
+    margin-top: 10px;
+  }
+
+  .cta {
+    margin-top: 10px;
+  }
+
+  .testimonial-cards {
+    /*flex-direction: column;*/
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+    position: fixed;
+    top: 0;
+    right: -250px;
+    width: 250px;
+    height: 100%;
+    background: #fff;
+    align-items: flex-start;
+    padding: 60px 20px;
+    box-shadow: -2px 0 8px rgba(0, 0, 0, 0.1);
+    transition: right 0.3s ease-in-out;
+    z-index: 1000;
+  }
+
+  nav ul.show {
+    right: 0;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  body.menu-open {
+    overflow: hidden;
+  }
+
+  .hero .container,
+  footer .container {
+    /*flex-direction: column;*/
+    text-align: center;
+  }
+
+  .service-card-content{
+    flex-direction: column;
+  }
+
+  .section-sub-header{
+    margin: 10px;
+  }
+  .inner-content {
+    margin: 0;
+  }
+
+  .hero-image {
+    display: none;
+  }
+  .btn-primary {
+    margin-bottom: 10px;
+  }
+}
